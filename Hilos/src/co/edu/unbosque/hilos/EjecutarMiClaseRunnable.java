@@ -1,6 +1,7 @@
 package co.edu.unbosque.hilos;
 
-public class HilosRunnable {
+public class EjecutarMiClaseRunnable {
+	
 	public static void main(String[] args) {
 
 		MiClaseRunnable m1 = new MiClaseRunnable("m1");

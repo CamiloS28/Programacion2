@@ -1,6 +1,7 @@
 package co.edu.unbosque.hilos;
 
-public class HilosThread {
+public class EjecutarMiClaseThread {
+	
 	public static void main(String[] args) {
 
 		MiClaseThread m1 = new MiClaseThread("m1");

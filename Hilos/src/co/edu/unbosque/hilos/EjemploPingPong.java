@@ -1,11 +1,11 @@
 package co.edu.unbosque.hilos;
 
-public class MiClasePingPong extends Thread {
+public class EjemploPingPong extends Thread {
 
 	private String palabra; // variable a imprimir
 	private int tiempoDeEspera; // tiempo entre impresiones
 
-	public MiClasePingPong(String queImprimir, int cantidadSegundos) {
+	public EjemploPingPong(String queImprimir, int cantidadSegundos) {
 		palabra = queImprimir;
 		tiempoDeEspera = cantidadSegundos;
 	}
