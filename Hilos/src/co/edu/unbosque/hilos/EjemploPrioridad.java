@@ -13,7 +13,7 @@ public class EjemploPrioridad implements Runnable {
 		// TODO Auto-generated method stub
 		EjemploPrioridad ep1 = new EjemploPrioridad();
 		Thread ej1T = new Thread(ep1, "GOLPE UNO");
-
+ 
 		ej1T.setPriority(Thread.MIN_PRIORITY);
 
 		EjemploPrioridad ep2 = new EjemploPrioridad();
