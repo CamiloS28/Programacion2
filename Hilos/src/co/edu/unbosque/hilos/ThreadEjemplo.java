@@ -2,7 +2,7 @@ package co.edu.unbosque.hilos;
 
 public class ThreadEjemplo extends Thread {
 	public ThreadEjemplo(String str) {
-		super(str);
+		setName(str);
 	}
 
 	public void run() {
@@ -17,3 +17,4 @@ public class ThreadEjemplo extends Thread {
 		System.out.println("Termina thread main");
 	}
 }
+
