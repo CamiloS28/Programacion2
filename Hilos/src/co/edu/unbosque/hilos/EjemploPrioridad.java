@@ -19,7 +19,7 @@ public class EjemploPrioridad implements Runnable {
 		EjemploPrioridad ep2 = new EjemploPrioridad();
 		Thread ej2T = new Thread(ep2, "GOLPE DOS");
 
-		ej1T.setPriority(Thread.MAX_PRIORITY);
+		ej2T.setPriority(Thread.MAX_PRIORITY);
 
 		ej1T.start();
 		ej2T.start();
