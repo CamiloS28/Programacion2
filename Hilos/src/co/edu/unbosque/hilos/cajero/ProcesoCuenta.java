@@ -12,8 +12,27 @@ public class ProcesoCuenta implements Runnable {
 			}
 		}
 	}
-
+	
 	private synchronized void realizarRetiro(int valor) {
+		if (cb.getSaldo() >= valor) {
+			//System.out.println(Thread.currentThread().getName() + " retira: " + valor
+			//		+ " ahora el saldo es de : " + cb.getSaldo());
+			System.out.println(Thread.currentThread().getName() + " Tiene saldo actual de: " + cb.getSaldo()+" y va a retirar: " + valor);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException ex) {
+			}
+			cb.retirar(valor);
+			System.out.println(" ** "+
+					Thread.currentThread().getName() + " hizo retiro exitoso de: " + valor + 
+					" ahora su saldo es : " + cb.getSaldo());
+		} else {
+			System.out.println("No hay saldo para " + Thread.currentThread().getName()
+					+ " para retirar " + cb.getSaldo());
+		}
+	}
+
+	private synchronized void realizarRetiro1(int valor) {
 		if (cb.getSaldo() >= valor) {
 			System.out.println(Thread.currentThread().getName()
 					+ " Se prepara para retirar: " + valor
@@ -22,7 +41,7 @@ public class ProcesoCuenta implements Runnable {
 				Thread.sleep(500);
 			} catch (InterruptedException ex) {
 			}
-			cb.retiro(valor);
+			cb.retirar(valor);
 			System.out.println(Thread.currentThread().getName()
 					+ " realizó el retiro de: " + valor + "\n");
 		} else {

@@ -7,7 +7,7 @@ public class CuentaBancaria {
         return saldo;
     }
 
-    public void retiro(int monto) {
+    public void retirar(int monto) {
         saldo = saldo - monto;
     }
 }
