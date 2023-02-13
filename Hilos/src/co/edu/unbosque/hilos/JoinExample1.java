@@ -4,6 +4,7 @@ public class JoinExample1 extends Thread
 {    
     public void run()  
     {    
+    	System.out.println("EJecutando:"+Thread.currentThread().getName());
         for(int i=1; i<=4; i++)  
         {    
             try  
