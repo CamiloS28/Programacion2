@@ -6,6 +6,8 @@ class GunFight {
 	synchronized public void fire(int bulletsToBeFired)
 	{
 		for (int i = 1; i <= bulletsToBeFired; i++) {
+			System.out.println(
+					"Firing bullet:"+bullets);
 			if (bullets == 0) {
 				System.out.println(i - 1
 								+ " bullets fired and "
