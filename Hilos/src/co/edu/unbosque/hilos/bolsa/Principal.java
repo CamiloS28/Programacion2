@@ -1,7 +1,7 @@
 package co.edu.unbosque.hilos.bolsa;
 
 public class Principal {
-
+//https://www.arquitecturajava.com/java-wait-notify-y-threads/
 	public static void main(String[] args) {
 
 		Bolsa bolsa = new Bolsa();

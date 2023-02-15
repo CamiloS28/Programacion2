@@ -9,6 +9,7 @@ public class HiloEnvio extends Thread {
 		this.bolsa = bolsa;
 	}
 
+	
 	@Override
 	public void run() {
 
@@ -23,7 +24,7 @@ public class HiloEnvio extends Thread {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("Enviando la bolsa con " + bolsa.getSize() + "elementos");
+			System.out.println("Enviando la bolsa con " + bolsa.getSize() + " elementos");
 		}
 	}
 
