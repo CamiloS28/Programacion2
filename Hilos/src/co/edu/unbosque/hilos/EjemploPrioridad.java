@@ -15,15 +15,13 @@ public class EjemploPrioridad implements Runnable {
 		Thread ej1T = new Thread(ep1, "GOLPE UNO");
  
 		ej1T.setPriority(Thread.MIN_PRIORITY);
-
+		
 		EjemploPrioridad ep2 = new EjemploPrioridad();
 		Thread ej2T = new Thread(ep2, "GOLPE DOS");
+		ej1T.start();
 
 		ej2T.setPriority(Thread.MAX_PRIORITY);
-
-		ej1T.start();
 		ej2T.start();
-
 		System.out.println("Termina el hilo principal");
 
 	}

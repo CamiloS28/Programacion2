@@ -8,18 +8,13 @@ public class HiloEnvio extends Thread {
 		super();
 		this.bolsa = bolsa;
 	}
-
-	
 	@Override
 	public void run() {
-
 		if (bolsa.estaLlena() != true) {
-
 			try {
 				synchronized (bolsa) {
 					bolsa.wait();
 				}
-
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

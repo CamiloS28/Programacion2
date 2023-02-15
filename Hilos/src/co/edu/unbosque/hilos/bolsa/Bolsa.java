@@ -8,8 +8,10 @@ public class Bolsa {
 
 	public void addProducto(Producto producto) {
 
-		if (!estaLlena())
+		if (!estaLlena()) {
+			System.out.println("Agregando Producto");
 			listaProductos.add(producto);
+		}
 	}
 
 	public ArrayList<Producto> getListaProductos() {
