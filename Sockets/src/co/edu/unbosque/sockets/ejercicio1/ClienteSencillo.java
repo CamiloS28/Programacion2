@@ -14,11 +14,11 @@ public final class ClienteSencillo {
 		try {
 			Socket cliente = new Socket("localhost", puerto);
 			try {
-				BufferedReader br = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+				BufferedReader br = 
+						new BufferedReader(new InputStreamReader(cliente.getInputStream()));
 				String saludo;
 				while ((saludo = br.readLine()) != null) {
 					System.out.println(saludo);
-
 				}
 			} finally {
 				if (cliente != null)
@@ -31,7 +31,6 @@ public final class ClienteSencillo {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }
+

@@ -9,13 +9,14 @@ public final class ServidorSencillo {
 	public void ejecuta(int puerto) {
 		try {
 			System.out.println("Servidor escuchando por el puerto:"+puerto);
-			// Ahora se crea un Socket servidor para esperar peticiones
+			// Se crea un Socket servidor para esperar peticiones
 			ServerSocket servidor = new ServerSocket(puerto);
 			Socket cliente;
 			// Cada vez que se conecta el cliente le enviamos un saludo
 			try {
 				while ((cliente = servidor.accept()) != null) {
-					new Thread(new Saludo(cliente)).start(); // <---se inicia un hilo para cada petición.
+					new Thread(new Saludo(cliente)).start(); 
+					// se inicia un hilo para cada petición.
 				}
 
 			} finally {
@@ -28,3 +29,4 @@ public final class ServidorSencillo {
 		}
 	}
 }
+

@@ -10,6 +10,5 @@ public class EjecutaServidorSencillo {
 		int puerto = entrada.nextInt();
 		new ServidorSencillo().ejecuta(puerto);
 	}
-
 }
 
