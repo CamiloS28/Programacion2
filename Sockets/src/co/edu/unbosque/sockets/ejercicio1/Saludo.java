@@ -11,8 +11,7 @@ public class Saludo implements Runnable {
 		this.cliente = cliente;
 
 	}
-
-	@Override
+	
 	public void run() {
 		System.out.println("Cliente conectado....");
 		try {
