@@ -11,7 +11,7 @@ public final class ClienteSencillo {
 	public void ejecuta(String ipPuerto) {
 		try {
 			String [] ipp = new String[2];
-			ipp = ipPuerto.split(":"); //formato direccionip:puerto
+			ipp = ipPuerto.split(":"); //formato direccionip:puerto -- algo
 			String ip = ipp[0];
 			int puerto = Integer.parseInt(ipp[1]);
 			Socket cliente = new Socket(ip, puerto);
