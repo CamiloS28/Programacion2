@@ -5,7 +5,7 @@ import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class QuienEs {
-
+//inicio
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		System.out.print("Digite host:");
