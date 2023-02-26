@@ -7,12 +7,14 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public final class ClienteSencillo {
-	public ClienteSencillo() {
-	}
 
-	public void ejecuta(int puerto) {
+	public void ejecuta(String ipPuerto) {
 		try {
-			Socket cliente = new Socket("localhost", puerto);
+			String [] ipp = new String[2];
+			ipp = ipPuerto.split(":");
+			String ip = ipp[0];
+			int puerto = Integer.parseInt(ipp[1]);
+			Socket cliente = new Socket(ip, puerto);
 			try {
 				BufferedReader br = 
 						new BufferedReader(new InputStreamReader(cliente.getInputStream()));
@@ -23,7 +25,6 @@ public final class ClienteSencillo {
 			} finally {
 				if (cliente != null)
 					cliente.close();
-
 			}
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
