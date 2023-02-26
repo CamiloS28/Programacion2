@@ -12,12 +12,9 @@ public class QuienEs {
 		String host = entrada.next();
 		if (host != null) {
 			try {
-				byte[] dirIPS=new byte[] {(byte) 172, 18, 20, 11};
-				System.out.println(dirIPS);
-				//InetAddress dir = InetAddress.getByName(host);
-				InetAddress dirIP = InetAddress.getByAddress(dirIPS);
-				System.out.println("IP: " + dirIP.getHostAddress());
-				System.out.println("Nombre: " + dirIP.getHostName());
+				InetAddress dir = InetAddress.getByName(host);
+				System.out.println("IP: " + dir.getHostAddress());
+				System.out.println("Nombre: " + dir.getHostName());
 			} catch (UnknownHostException e) {
 				System.out.println("host desconocido");
 			}
