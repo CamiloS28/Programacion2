@@ -6,7 +6,7 @@ public class EjecutaClienteSencillo {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		System.out.print("CLIENTE> Digite dirip:Puerto -> ");
+		System.out.print("CLIENTE> Digite dirip:Puerto -> ");//formato direccionip:puerto
 		String iPpuerto = entrada.next();
 		new ClienteSencillo().ejecuta(iPpuerto);
 	}
