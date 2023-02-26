@@ -14,7 +14,7 @@ public class QuienEs {
 			try {
 				InetAddress dir = InetAddress.getByName(host);
 				System.out.println("IP: " + dir.getHostAddress());
-				System.out.println("Nombre: " + dir.getHostName());
+				System.out.println("Nombre: " + dir.getHostName());//
 			} catch (UnknownHostException e) {
 				System.out.println("host desconocido");
 			}
