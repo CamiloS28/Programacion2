@@ -10,13 +10,8 @@ public class UDPClient {
      try {
         String serverHostname = new String ("127.0.0.1");
 
-        if (args.length > 0)
-           serverHostname = args[0];
-  
       BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in)); 
-  
       DatagramSocket clientSocket = new DatagramSocket(); 
-  
       InetAddress IPAddress = InetAddress.getByName(serverHostname); 
       System.out.println ("Atendiendo la conexion para " + IPAddress + 
                           ") via UDP puerto 9876");
@@ -38,7 +33,7 @@ public class UDPClient {
       DatagramPacket receivePacket = 
          new DatagramPacket(receiveData, receiveData.length); 
   
-      System.out.println ("Waiting for return packet");
+      System.out.println ("Esperando Paquete de Retorno...");
       clientSocket.setSoTimeout(10000);
 
       try {
