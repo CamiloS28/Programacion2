@@ -8,9 +8,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ServidorTCP1235 {
+public class ServidorTCP1235 extends Thread{
 
-	public void iniciarServidor() {
+	public void run() {
 
 		// TODO Auto-generated method stub
 		try {

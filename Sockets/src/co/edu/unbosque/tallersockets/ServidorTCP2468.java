@@ -8,9 +8,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ServidorTCP2468 {
-	public void iniciarServidor() {
-
+public class ServidorTCP2468  extends Thread{
+	
+	public void run(){
 		// TODO Auto-generated method stub
 		try {
 			System.out.println("SERVIDOR 2468> Host: " + InetAddress.getLocalHost().toString());
@@ -51,5 +51,4 @@ public class ServidorTCP2468 {
 		}
 
 	}
-
 }

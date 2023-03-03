@@ -6,8 +6,8 @@ public class InicioServidores {
 		// TODO Auto-generated method stub
 		ServidorTCP1235 servidor1 = new ServidorTCP1235();
 		ServidorTCP2468 servidor2 = new ServidorTCP2468();
-		servidor1.iniciarServidor();
-		servidor2.iniciarServidor();
+		servidor1.start();
+		servidor2.start();
 	}
 
 }
