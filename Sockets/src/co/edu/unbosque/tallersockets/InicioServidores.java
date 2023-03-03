@@ -4,10 +4,9 @@ public class InicioServidores {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ServidorTCP1235 servidor1 = new ServidorTCP1235();
-		ServidorTCP2468 servidor2 = new ServidorTCP2468();
+		ServidorTCPx servidor1 = new ServidorTCPx(1235);
+		ServidorTCPx servidor2 = new ServidorTCPx(2589);
 		servidor1.start();
 		servidor2.start();
 	}
-
 }

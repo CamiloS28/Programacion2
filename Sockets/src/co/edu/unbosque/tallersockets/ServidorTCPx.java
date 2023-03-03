@@ -8,19 +8,26 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ServidorTCP1235 extends Thread{
 
+public class ServidorTCPx extends Thread{
+
+	private int pto;
+
+	public ServidorTCPx(int puerto) {
+		this.pto = puerto;
+	}
+	
 	public void run() {
 
 		// TODO Auto-generated method stub
 		try {
-			System.out.println("SERVIDOR 1235> Host: " + InetAddress.getLocalHost().toString());
+			System.out.println("SERVIDOR"+ this.pto+"> Host: " + InetAddress.getLocalHost().toString());
 		} catch (UnknownHostException e) {
 			System.err.println("No se detectó la dirección IP " + e);
 		}
 		ServerSocket serverSocket = null;
 		try {
-			serverSocket = new ServerSocket(1235);
+			serverSocket = new ServerSocket(this.pto);
 		} catch (IOException e) {
 			System.err.println("Error al abrir el socket " + e);
 		}
