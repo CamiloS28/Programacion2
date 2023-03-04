@@ -28,7 +28,7 @@ public class ClienteTCP2 {
 		} catch (UnknownHostException e) {
 			System.out.println("No se ha encontrado el Host");
 		}
-		int puerto = 2589;
+		int puerto = 2468;
 		for (int n = 0; n < mensaje.length; n++) {
 			Socket socket = null;
 			DataInputStream dis = null;

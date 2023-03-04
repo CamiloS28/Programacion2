@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 
-public class ServidorTCPx extends Thread{
+public class ServidorTCPx implements Runnable{
 
 	private int pto;
 
