@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>JSF 2.2 Ejemplo 3</title>
+</h:head>
+<h3>Ejemplo de formulario JSF impares</h3>
+
+<h:body>
+	<h:form>
+		<h3>Please enter en numero para ver si es par o impar</h3>
+		<table>
+			<tr>
+				<td>N&uacute;mero:</td>
+				<td><h:inputText value="#{ejemplo3.numero}"></h:inputText></td>
+			</tr>
+		</table>
+		<p>
+			<h:commandButton value="Calcular" action="ejemplo3.navegar"></h:commandButton> 
+		</p>
+	</h:form>
+</h:body>
+</html>
