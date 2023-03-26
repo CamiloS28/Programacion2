@@ -29,8 +29,6 @@ public class RedirectServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		//response.sendRedirect("hola.jsp");f
 		String nextHTML = "/hola2.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextHTML);
 		request.setAttribute("respuesta", "Respuesta desde Servlet!!");

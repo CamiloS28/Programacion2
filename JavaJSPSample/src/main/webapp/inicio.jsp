@@ -28,7 +28,7 @@
 </head>
 <body>
 	<h2>Formularios y validaciones</h2>
-	<form action="respuesta.jsp" method="post">
+	<form action="EjemploServlet" method="post">
 		<table border="0">
 			<tr>
 				<td>Usuario:</td>
