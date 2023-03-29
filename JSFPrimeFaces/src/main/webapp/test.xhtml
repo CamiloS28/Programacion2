@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3c.org/1999/xhtml"
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:p="http://primefaces.org/ui"
-        xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
     <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./../resources/css/estilo.css" rel="stylesheet" type="text/css" />
+        <title>
+            <ui:insert name="titulo">
+                Facelets Template
+            </ui:insert>
+        </title>
     </h:head>
+
     <h:body>
-        <p:inputText value="#{bean.value}" pt:placeholder="Watermark here"/>
+
+        <header id="cabecera">
+            <ui:insert name="cabecera">
+                <h1>Plantillas JSF</h1>
+            </ui:insert>
+        </header>
+
+        <div class="cuerpo">
+            <nav id="menu">
+                <h:form>
+                    <ul>
+                        <li><h:commandLink action="inicio">Inicio</h:commandLink></li>
+                        <li><h:commandLink action="productos">Productos</h:commandLink></li>
+                        <li><h:commandLink action="localizacion">Localización</h:commandLink></li>
+                        <li><h:commandLink action="contacto">Contacto</h:commandLink></li>
+                    </ul> 
+                </h:form>
+            </nav>
+
+            <article class="contenido">
+                <ui:insert name="contenido">
+                    Aqui va el contenido de la página
+                </ui:insert>
+            </article>
+        </div>
+
+        <footer id="pie">
+            <span id="proyecto">Ejemplo uso de plantillas JSF.</span>
+            <span id="autor"><a href="http:programandoointentandolo.com">Iván Salas Corrales</a></span>
+        </footer>
+
     </h:body>
+
 </html>
