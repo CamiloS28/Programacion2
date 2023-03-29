@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="RedirectServlet" method="post">
+	<form action="DemoServlet" method="post">
 		<table border="0">
 			<tr>
 				<td>Usuario:</td>
