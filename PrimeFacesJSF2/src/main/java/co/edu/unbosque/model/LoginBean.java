@@ -1,14 +1,13 @@
 package co.edu.unbosque.model;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.io.Serializable;
 
+import javax.annotation.ManagedBean;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
-import javax.faces.event.ActionEvent;
 import javax.servlet.http.HttpSession;
 
 //import org.primefaces.context.PrimeRequestContext;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpSession;
 //https://github.com/primefaces/primefaces/tree/master/docs/8_0
 //https://www.dataprix.com/es/blog-it/magm/login-y-control-acceso-basico-primefaces-paso-paso
 @ManagedBean
-@SessionScoped
 public class LoginBean implements Serializable {
 	private static final long serialVersionUID = -2152389656664659476L;
 	private String nombre;
@@ -49,12 +47,12 @@ public class LoginBean implements Serializable {
 		msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bienvenid@", nombre);
 		//msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Credenciales no válidas");
 		FacesContext.getCurrentInstance().addMessage(null, msg);
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
 	    try {
 			externalContext.redirect("reports.xhtml");
