@@ -98,7 +98,7 @@ public class Modelo {
 		try {
 			//Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:bd_estudiantes.db");
-			//Connection conn = DriverManager.getConnection(DB_URL, "root", "mamacita");
+			//Connection conn = DriverManager.getConnection(DB_URL, "root", "xxxx");
 			//
 			return conn;
 		} catch (Exception e) {
