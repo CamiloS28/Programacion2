@@ -14,13 +14,6 @@ public class ClienteDAO implements ICrud{
 
 	private List<ClienteDTO> listaClientes;
 
-	public List<ClienteDTO> getListaClientes() {
-		return listaClientes;
-	}
-
-	public void setListaClientes(List<ClienteDTO> listaClientes) {
-		this.listaClientes = listaClientes;
-	}
 
 	//Imprimir por consola
 	private void listarClientes(List<ClienteDTO> listaClientes) {
@@ -133,6 +126,7 @@ public class ClienteDAO implements ICrud{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 	public int generarId() {
 		int id;
 		SessionFactory miFactory = new Configuration()
@@ -154,5 +148,14 @@ public class ClienteDAO implements ICrud{
 		}		
 		return id;		
 	}
+
+	public List<ClienteDTO> getListaClientes() {
+		return listaClientes;
+	}
+
+	public void setListaClientes(List<ClienteDTO> listaClientes) {
+		this.listaClientes = listaClientes;
+	}
+
 	
 }
