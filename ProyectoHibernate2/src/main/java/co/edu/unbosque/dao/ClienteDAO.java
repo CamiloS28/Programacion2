@@ -24,7 +24,6 @@ public class ClienteDAO implements ICrud{
 
 	//Imprimir por consola
 	private void listarClientes(List<ClienteDTO> listaClientes) {
-		System.out.println(" --- Listado Cliente");
 		for (ClienteDTO cliente : listaClientes) {
 			System.out.println(cliente);
 		}

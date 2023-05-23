@@ -33,12 +33,6 @@ public class ClienteDTO {
 		this.direccion = direccion;
 	}
 
-	@Override
-	public String toString() {
-		return "Clientes [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", direccion=" + direccion
-				+ "]";
-	}
-
 	public int getId() {
 		return id;
 	}
